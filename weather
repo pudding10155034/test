@@ -8,7 +8,7 @@ channel_secret = '2f3bfde4308b0976e049889404ce7107'
 #Push訊息到指定的UserID中
 #line_bot_api.push_message("U6715c29a9594a1e8755aeec4bd85bdc4", TextSendMessage(text="歡迎使用Line查詢機器人"))
 
-tip = """
+tip1 = """
 歡迎使用 Line 氣象查詢機器人
 -----------------------------------------------------------------
 使用教學：
@@ -17,6 +17,9 @@ tip = """
 3.傳送地址資訊 > 回傳目前所在位址的即時氣象、天氣預報以及空氣品質的資訊
 """
 
+tip2 = """
+輸入格式錯誤，輸入「說明」回傳使用教學
+"""
 def linebot(request):
     body = request.get_data(as_text=True)
     try:
@@ -41,11 +44,10 @@ def linebot(request):
                 elif text == '雷達回波圖' or text == '雷達回波':         # 如果是雷達回波圖相關的文字
                     # 傳送雷達回波圖 ( 加上時間戳記 )
                     reply_image(f'https://cwbopendata.s3.ap-northeast-1.amazonaws.com/MSC/O-A0058-001.png?{time.time_ns()}', reply_token, access_token)
-                elif text == '說明':         
-                    text = tip
-                    reply_message(text, reply_token, access_token)
+                elif text == '說明':
+                    reply_message(tip1, reply_token, access_token)
                 else:
-                    reply_message(text, reply_token, access_token)        # 如果是一般文字，直接回覆同樣的文字 
+                    reply_message(tip2, reply_token, access_token)        # 如果是一般文字，直接回覆同樣的文字 
     except:
         print('error')          
     return 'OK'    
