@@ -6,7 +6,7 @@ access_token = 'zBer4BKtysU5YtxNCiEX9X3joDLgSeoVKHVGEXa/uWLzZyGOu+P48AM/sTxdrud2
 channel_secret = '2f3bfde4308b0976e049889404ce7107'
 
 #Push訊息到指定的UserID中
-line_bot_api.push_message("U6715c29a9594a1e8755aeec4bd85bdc4", TextSendMessage(text="歡迎使用Line查詢機器人"))
+#line_bot_api.push_message("U6715c29a9594a1e8755aeec4bd85bdc4", TextSendMessage(text="歡迎使用Line查詢機器人"))
 
 tip = """
 歡迎使用 Line 氣象查詢機器人
