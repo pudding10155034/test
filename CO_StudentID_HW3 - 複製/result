@@ -1,0 +1,29 @@
+fifo:Miss Rate: 52.0297 %
+
+Policy: "lfu"
+Data Cache Setting with: 8:1:16
+Miss Rate: 35.6837 %
+
+Policy: "lfu"
+Data Cache Setting with: 8:1:32
+Miss Rate: 22.2603 %
+
+Data Cache Setting with: 8:1:64
+Miss Rate: 15.4187 %
+
+Policy: "lfu"
+Data Cache Setting with: 8:2:64
+Miss Rate: 7.911 %
+
+Policy: "lfu"
+Data Cache Setting with: 8:4:64
+Miss Rate: 2.4647 %
+
+Policy: "lfu"
+Data Cache Setting with: 8:8:64
+Miss Rate: 1.173 %
+
+=====
+Policy: "lfu"
+Data Cache Setting with: 8:8:128
+Miss Rate: 0.5813 %
